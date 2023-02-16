@@ -1,6 +1,6 @@
-const fs = require('fs');
-const util = require('util')
-const writeFile = util.promisify(fs.writeFile);
+const FS = require('fs');
+const utility = require('util')
+const writeFile = utility.promisify(FS.writeFile);
 
 const generateBodyBefore = () => {
     return `
@@ -32,18 +32,18 @@ const generateBodyAfter = () => {
     </body>
     </html>`
 }
-const generateManager = (ManagerD) => {
+const generateManager = (manData) => {
     return `
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
             <div class="card-body bg-primary text-white">
-                <h5 class="card-title">${ManagerD.getName()}</h5>
-                <p><i class="fa-solid fa-mug-hot"></i><span class="card-text pl-2">${ManagerD.getRole()}</span></p>
+                <h5 class="card-title">${manData.getname()}</h5>
+                <p><i class="fa-solid fa-mug-hot"></i><span class="card-text pl-2">${manData.getRole()}</span></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${ManagerD.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto: ${ManagerD.getEmail()}">${ManagerD.getEmail()}</a></li>
-                <li class="list-group-item">Office number:${ManagerD.getOfficeNumber()}</li>
+                <li class="list-group-item">ID:${manData.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto: ${manData.getEmail()}">${manData.getEmail()}</a></li>
+                <li class="list-group-item">Office number:${manData.getOfficeNumber()}</li>
             </ul>
         </div>
     </div>
@@ -55,7 +55,7 @@ const generateEngineer = (EngineerD) => {
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
             <div class="card-body bg-primary text-white">
-                <h5 class="card-title">${EngineerD.getName()}</h5>
+                <h5 class="card-title">${EngineerD.getname()}</h5>
                 <p><i class="fa-solid fa-glasses"></i><span class="card-text pl-2">${EngineerD.getRole()}</span></p>
             </div>
             <ul class="list-group list-group-flush">
@@ -103,8 +103,7 @@ generateHTML = async (employeeARR) => {
     }
     html += generateBodyAfter();
     writeFile("./dist/index.html", html).then(err => err ? console.log(err) : console.log("File successfully generated in the dist folder"))
-    // or 
-// fs.writeFile("./dist/index.html", html,(err) => err ? console.log(err) : console.log("File successfully generated in the dist folder!"))
+
 }
 
 module.exports = generateHTML;

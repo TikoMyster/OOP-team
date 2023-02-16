@@ -1,30 +1,30 @@
 const {Engineer} = require('../lib/Classes');
 
 describe('Engineer class',()=>{
-    const engineer = new Engineer('chris',2,'tikomyster20@gmail.com','ChrisS.')
+    const engin = new Engineer('chris',2,'tikomyster20@gmail.com','ChrisS.')
     it('returns the name, id, email and github username',()=>{
-        expect(engineer._name).toBe('chris');
-        expect(engineer._id).toBe(2);
-        expect(engineer._email).toBe('tikomyster20@gmail.com');
-        expect(engineer._github).toBe('ChrisS.')
+        expect(engin._name).toBe('Silas');
+        expect(engin._id).toBe(2);
+        expect(engin._email).toBe('tikomyster20@gmail.com');
+        expect(engin._github).toBe('SilasisCool.')
     })
     it('getRole() returns "Engineer',()=>{
-        expect(engineer.getRole()).toBe('Engineer');
+        expect(engin.getRole()).toBe('Engineer');
     })
     it('getId() method returns the ID',()=>{
-        expect(engineer.getId()).toBe(engineer._id);
+        expect(engin.getId()).toBe(engin._id);
     })
 
     it('getName() method returns the name',()=>{
-        expect(engineer.getName()).toBe(engineer._name);
+        expect(engin.getName()).toBe(engin._name);
     })
 
     it('getEmail() method returns the email',()=>{
-        expect(engineer.getEmail()).toBe(engineer._email);
+        expect(engin.getEmail()).toBe(engin._email);
     });
 
     it('getGithub() method returns the github username',()=>{
-        expect(engineer.getGithub()).toBe(engineer._github);
+        expect(engin.getGithub()).toBe(engin._github);
     })
 
 })

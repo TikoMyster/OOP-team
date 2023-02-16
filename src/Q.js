@@ -12,7 +12,7 @@ const managerQ = [{
     message: "Manager's Employee ID?",
     name: "id",
     validate: function (id) {
-        return isNaN(parent(id)) ? "Enter manager's employee id" :true;
+        return isNaN((id)) ? "Enter manager's employee id" :true;
     }
 },
 {
@@ -20,7 +20,7 @@ const managerQ = [{
     message: "What's the manager's email address?",
     name: "email",
     validate: function (email) {
-        return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(email) || "eEnter the manager's email";
+        return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(email) || "Enter the manager's email";
     },
 },
 {
@@ -28,7 +28,7 @@ const managerQ = [{
     message: "What's the manager's office number?",
     name: "office",
     validate: function (office) {
-        return isNaN(parseInt(office)) ?  "Please enter the manager's office number": true;
+        return isNaN(parseInt(office)) ?  "Enter the manager's office number": true;
     }
 }]
 const engineerQ = [{
@@ -36,7 +36,7 @@ const engineerQ = [{
     message: "What's the engineer's name?",
     name: "name",
     validate: function (input) {
-        return typeof input === "string" ? true : "Please enter the engineer's name!"
+        return typeof input === "string" ? true : "Enter the engineer's name!"
     }
 },
 {
@@ -44,7 +44,7 @@ const engineerQ = [{
     message: "What's the engineer's employee ID?",
     name: "id",
     validate: function (id) {
-        return isNaN(parseInt(id))? "Please enter the engineer's employee ID!": true;
+        return isNaN(parseInt(id))? "Enter the engineer's employee ID!": true;
     }
 },
 {
@@ -72,7 +72,7 @@ const internQ = [{
     message: "What's the intern's name?",
     name: "name",
     validate: function (input) {
-        return typeof input === "string" ? true : "Please enter the intern's name"
+        return typeof input === "string" ? true : "Enter the intern's name"
     }
 },
 {

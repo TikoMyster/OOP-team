@@ -1,9 +1,9 @@
 const { Employee } = require('../lib/Classes')
 
 describe('Employee class', () => {
-    const employee = new Employee('chris', 1, 'tikomyster20@gmail.com')
+    const employee = new Employee('Katsu', 1, 'tikomyster20@gmail.com')
     it('returns the name,id and email of the employee', () => {
-        expect(employee._name).toBe('chris');
+        expect(employee._name).toBe('Katsu');
         expect(employee._id).toBe(1);
         expect(employee._email).toBe('tikomyster20@gmail.com');
     });
