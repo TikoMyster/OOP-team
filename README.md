@@ -13,7 +13,7 @@ This project is a team profile generator using Nodejs, OOP and Jest. The user is
 
 Still work in progress
 
-<video src='[label](assets/2023-02-15%2019-16-51.mp4)' width=180/>
+[label](assets/2023-02-15%2019-16-51.mp4)
 
 ## Github URL
 https://github.com/TikoMyster/OOP-team
