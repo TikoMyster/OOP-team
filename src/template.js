@@ -1,5 +1,5 @@
 const FS = require('fs');
-const utility = require('util')
+const utility = require('util');
 const writeFile = utility.promisify(FS.writeFile);
 
 const generateBodyBefore = () => {
@@ -32,22 +32,20 @@ const generateBodyAfter = () => {
     </body>
     </html>`
 }
-const generateManager = (manData) => {
-    return `
+const generateManager = (ManD) => { return ManD.map(ManD => { return `
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
             <div class="card-body bg-primary text-white">
-                <h5 class="card-title">${manData.getname()}</h5>
-                <p><i class="fa-solid fa-mug-hot"></i><span class="card-text pl-2">${manData.getRole()}</span></p>
+                <h5 class="card-title">${ManD.getname()}</h5>
+                <p><i class="fa-solid fa-mug-hot"></i><span class="card-text pl-2">${ManD.getRole()}</span></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${manData.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto: ${manData.getEmail()}">${manData.getEmail()}</a></li>
-                <li class="list-group-item">Office number:${manData.getOfficeNumber()}</li>
+                <li class="list-group-item">ID:${ManD.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto: ${ManD.getEmail()}">${ManD.getEmail()}</a></li>
+                <li class="list-group-item">Office number:${ManD.getOfficeNumber()}</li>
             </ul>
         </div>
-    </div>
-`
+    </div>`})
 }
 
 const generateEngineer = (EngineerD) => {
